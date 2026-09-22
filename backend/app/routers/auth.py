@@ -68,6 +68,8 @@ class ChangePasswordIn(BaseModel):
     new_password: str = Field(min_length=10, max_length=128)
 
 
+
+
 @router.post("/change-password", dependencies=[Depends(rate_limit("pw", 10, 60))])
 def change_password(body: ChangePasswordIn, user: User = Depends(get_current_user), db: Session = Depends(get_db)):
     if not verify_password(body.current_password, user.password_hash):
