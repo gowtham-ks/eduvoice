@@ -77,3 +77,5 @@ def change_password(body: ChangePasswordIn, user: User = Depends(get_current_use
     user.password_hash = hash_password(body.new_password)
     db.commit()
     return {"ok": True}
+
+
