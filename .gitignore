@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.pytest_cache/
+# Local data and secrets: never commit these
+*.db
+*.pem
+.env
+.env.*
+!.env.example
+# Node / Next.js
+node_modules/
+.next/
+next-env.d.ts
+*.tsbuildinfo
+# Vercel
+.vercel/
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
