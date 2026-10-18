@@ -53,7 +53,8 @@ def get_credential(c: TestClient, assignment_id: int):
 
 
 def payload(cred, assignment_id=1, **extra):
-    base = dict(assignment_id=assignment_id, clarity=4, pace=3, examples=5, doubts=4, overall=4,
+    base = dict(assignment_id=assignment_id, clarity=4, pace=3, examples=5, doubts=4, engagement=4, relevance=4,
+                overall=4,
                 went_well="Explains clearly", to_improve="A bit fast", **cred)
     base.update(extra)
     return base
