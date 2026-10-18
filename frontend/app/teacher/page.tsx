@@ -9,7 +9,7 @@ type Summary = {
   ratings?: Record<string, number>;
   sentiment?: Record<string, number>;
   topics?: Record<string, number>;
-  comments?: { went_well: string; to_improve: string }[] | null;
+  comments?: { went_well: string; to_improve: string; suggestions?: string }[] | null;
   comments_needed?: number;
 };
 
