@@ -27,8 +27,8 @@ class FeedbackIn(BaseModel):
     examples: int = Rating
     doubts: int = Rating
     overall: int = Rating
-    engagement: int = Rating
-    relevance: int = Rating
+    engagement: int = Field(3, ge=1, le=5)
+    relevance: int = Field(3, ge=1, le=5)
     went_well: str = Field("", max_length=1000)
     to_improve: str = Field("", max_length=1000)
     suggestions: str = Field("", max_length=1000)
